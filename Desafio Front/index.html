@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Desafio</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Usuários: </h1>
+            <img src="./butterrflies2.png" alt="butterflies">
+        </header>
+        <div class="seeUsersDiv">
+            
+        </div>
+        <div class="button">
+            <button type="submit" onclick=updatePage()>Atualizar</button>
+        </div>
+    </div>
+</body>
+<script>
+
+    const seeUsersDiv = document.querySelector('.seeUsersDiv')
+
+    const seeUsersUl = document.createElement('ul')
+    seeUsersDiv.appendChild(seeUsersUl)
+
+    function getUsers() {
+        fetch('https://api.randomuser.me/?results=10')
+            .then(response => response.json())
+            .then(data => {
+                for (i=0; i<data.results.length; i++) {
+                    const firstNameUser = data.results[i].name.first
+
+                    console.log('ola')
+                    const seeUsersLi = document.createElement('li')
+                    seeUsersLi.innerText = firstNameUser
+                    seeUsersUl.appendChild(seeUsersLi)
+                }
+            })
+    }
+    getUsers()
+    function updatePage(){
+        window.location.reload()
+    }
+</script>
+</html>

@@ -1,0 +1,62 @@
+:root{
+    --cinza: #eae4f1;
+    --rosa: #914776;
+    --branco: #FFFFFF;
+    --babypink: #db7cbd;
+    --borda: #b7c3cc;
+    --azulEscuro: #376a85;
+    --cinzaMais: #2e2e31;
+
+
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: var(--azulEscuro);
+}
+h1{
+    color: var(--rosa);
+    font-size: 50px;
+    font-family: 'Coiny', cursive;
+}
+.container header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container header img{
+    max-width: 200px;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.button{
+    padding-right: 14rem;
+    text-align: right;
+}
+button{
+    background-color: var(--rosa);
+    color: var(--cinza);
+    border-radius: 0.65rem;
+    border-style: none;
+    box-shadow: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.seeUsersDiv{
+    max-width: 960px;
+    text-align: center;
+    font-size: 23px;
+    color: var(--cinzaMais);
+    font-family: 'Montserrat', sans-serif;
+}
+
